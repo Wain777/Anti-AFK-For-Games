@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,22 +8,27 @@
     <title>Anti AFK For Games by Wain</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="main">
         <div class="active">
-            <input type="button" value="START">
-            <input type="button" value="STOP">
+            <input type="button" value="START" id="start" tabindex="-1">
+            <input type="button" value="STOP" id="stop" tabindex="-1">
         </div>
-        
+
         <div class="custom">
             <fieldset>
                 <p>Want to change key?</p>
                 <p>(default key - space bar)</p>
-                <input type="button" value="USE">
-                <input type="text" id="custom-key">
-                <input type="button" id="custom-key-state" value="RESET">
+                <div class="inputs">
+                    <p>USE</p>
+                    <input type="checkbox" id="custom-key-state" tabindex="-1">
+                    <input type="text" id="custom-key" tabindex="-1">
+                </div>
             </fieldset>
         </div>
     </div>
+    <script defer src="renderer.js"></script>
 </body>
+
 </html>
