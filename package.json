@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "description": "",
-  "author", "";
+  "author", "",
   "devDependencies": {
     "electron-builder": "^23.6.0",
     "electron": "^23.1.2"
