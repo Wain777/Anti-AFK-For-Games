@@ -10,7 +10,9 @@ jobs:
       with:
         node-version: 14
     - name: install dependencies
-      run: npm install
+      run: npm i
+    - name: i builder
+      run: npm i electron-builder
     - name: return
       run: cd ../../
     - name: build
