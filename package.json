@@ -4,6 +4,10 @@
   "main": "index.js",
   "description": ".",
   "author": "Wain",
+  "scripts": {
+		"build": "npx electron-builder --win",
+		"start": "node index.js"
+	},
   "devDependencies": {
     "electron-builder": "^23.6.0",
     "electron": "^23.1.2"
