@@ -12,22 +12,9 @@ jobs:
     - name: install dependencies
       run: npm install
     - name: build
-      run: npx electron-builder --linux index.js
-
-  build_on_win:
-    runs-on: windows-latest
-    steps:
-    - uses: actions/checkout@v2
-    - uses: actions/setup-node@master
-      with:
-        node-version: 14
-    - name: get back
-      run: cd ../../
-    - name: install dependencies
-      run: npm install
-    - name: build
-      run: npm run build
-    - name: publish
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: npm run publish
+      run: npx electron-builder --linux --win index.js
+    - name: Upload artifacts 
+       uses: actions/upload-artifact@v3 
+       with: 
+         name: ${{matrix.BUILD_CONFIGURATION}} 
+         path: ${{matrix.BUILD_CONFIGURATION}}/*.*
