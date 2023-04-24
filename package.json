@@ -5,7 +5,7 @@
   "description": ".",
   "author": "Wain",
   "scripts": {
-		"build": "npx electron-builder --win",
+		"build": "npx  electron-builder -p always --win",
 		"start": "node index.js"
 	},
   "devDependencies": {
