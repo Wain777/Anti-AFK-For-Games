@@ -23,8 +23,6 @@ jobs:
         node-version: 14
     - name: install dependencies
       run: npm install
-    - name: init
-      run: npm init
     - name: build
       run: npx electron-builder --win index.js
     - name: publish
