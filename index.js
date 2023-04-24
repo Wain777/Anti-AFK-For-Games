@@ -45,6 +45,7 @@ function sleep(ms) {
 const press = async (customKey) => {
   let key = "{ }";
   loop = 0;
+
   while (loop == 0) {
     exec(
       `function command { $obj = New-Object -ComObject WScript.Shell; $obj.SendKeys('${key}${customKey}'); }; command;`,

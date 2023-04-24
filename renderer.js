@@ -11,7 +11,14 @@ startButton.addEventListener("click", () => {
     if (customKey == "shift") customKey = "+";
     if (customKey == "alt") customKey = "%";
 
-    if (!(customKey == "ctrl" || customKey == "control" || customKey == "shift" || customKey == "alt")) {
+    if (
+      !(
+        customKey == "ctrl" ||
+        customKey == "control" ||
+        customKey == "shift" ||
+        customKey == "alt"
+      )
+    ) {
       customKey = "{" + customKey + "}";
     }
   }
