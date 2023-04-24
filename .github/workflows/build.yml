@@ -21,6 +21,8 @@ jobs:
     - uses: actions/setup-node@master
       with:
         node-version: 14
+    - name: get back
+      run: cd ....
     - name: install dependencies
       run: npm install
     - name: build
