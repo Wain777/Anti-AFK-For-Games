@@ -2,10 +2,8 @@
   "name": "anti-afk-for-games",
   "version": "1.0.0",
   "main": "index.js",
-  "dependencies": {
-    "electron": "^23.1.2"
-  },
   "devDependencies": {
-    "electron-builder": "^23.6.0"
+    "electron-builder": "^23.6.0",
+    "electron": "^23.1.2"
   }
 }
