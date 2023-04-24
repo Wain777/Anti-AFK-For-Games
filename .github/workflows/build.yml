@@ -1,0 +1,13 @@
+name: Build/release
+
+on: push
+
+jobs:
+  release:
+    name: Build
+    runs-on: ubuntu-latest
+    container: node:12.18.4
+    steps:
+      - run: node --verison
+      - run: npm --version
+      - run: npm install
