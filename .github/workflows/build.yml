@@ -3,7 +3,7 @@ name: Build/release
 on: push
 
 jobs:
-  release:
+  first-job:
     name: Build
     runs-on: ubuntu-latest
     container: node:12.18.4
