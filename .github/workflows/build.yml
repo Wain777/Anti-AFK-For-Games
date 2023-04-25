@@ -1,27 +1,16 @@
-name: Node.js CI
-
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+name: Build
+on: [push, pull_request]
 
 jobs:
-  build:
-
+  build_on_linux:
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [10.x, 12.x, 14.x, 15.x]
-
     steps:
-      - uses: actions/checkout@v3
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ matrix.node-version }}
-      - run: npm ci
-      - run: npx electron-build --linux --win index.js
-      
-      
+    - uses: actions/checkout@v2
+    - name: install dependencies
+      run: npm i
+    - name: return
+      run: cd../../
+    - name: build
+      run: npx electron-builder --linux --win index.js
+    - name: publish
+      run: npm run publish
