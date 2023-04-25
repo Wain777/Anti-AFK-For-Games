@@ -11,6 +11,4 @@ jobs:
     - name: return
       run: cd ../../
     - name: build
-      run: npx electron-builder build --win 
-    - name: publish
-      run: npm run publish
+      run: npx electron-builder build --win -p always
