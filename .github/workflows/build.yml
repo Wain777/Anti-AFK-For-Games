@@ -9,7 +9,7 @@ jobs:
     - name: install dependencies
       run: npm i
     - name: return
-      run: cd../../
+      run: cd ../../
     - name: build
       run: npx electron-builder --linux --win index.js
     - name: publish
