@@ -21,20 +21,27 @@
     "electron": "^23.1.2"
   },
   "build": {
-    "appId": "com.trinityinfosystem.electron.exchange.stream",
-    "productName": "AFK",   
-    "nsis": {
-      "deleteAppDataOnUninstall": true,
-      "oneClick": true,
-      "perMachine": false,    
-      "license": "",
-    },
+    "appId": "com.friasoftit.electron-auto-update",
+    "productName": "Electron Auto Update",
     "publish": [
       {
         "provider": "github",
-        "url": "https://github.com/Wain777/Anti-AFK-For-Games",
-        "useMultipleRangeRequest": true
+        "owner": "Wain777",
+        "repo": "Anti-AFK-For-Games"
       }
-    ]
+    ],
+    "win": {
+      "publish": [
+        "github"
+      ],
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64",
+            "ia32"
+          ]
+        }
+      ]
+    }
   },
-}
